@@ -1,0 +1,23 @@
+{
+	"name": "anyone-backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm test",
+		"start": "pm2-runtime start ./bin/www"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LimChanyeop/Anyone-Backend.git"
+	},
+	"author": "Limchanyeop",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/LimChanyeop/Anyone-Backend/issues"
+	},
+	"homepage": "https://github.com/LimChanyeop/Anyone-Backend#readme",
+	"dependencies": {
+		"express": "^4.18.2"
+	}
+}
