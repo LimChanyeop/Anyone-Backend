@@ -18,6 +18,12 @@
 	},
 	"homepage": "https://github.com/LimChanyeop/Anyone-Backend#readme",
 	"dependencies": {
-		"express": "^4.18.2"
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"express-generator": "^4.16.1",
+		"fs": "^0.0.1-security",
+		"mysql2": "^3.0.1",
+		"path": "^0.12.7",
+		"sequelize": "^6.28.0"
 	}
 }

@@ -1,6 +1,5 @@
 var express = require("express");
 
-const logger = require("./config/logger");
 var app = express();
 
 // Default Setting
