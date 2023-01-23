@@ -5,8 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "npm test",
-		"start": "pm2 start ./bin/www",
-		"restart": "pm2 restart ./bin/www"
+		"start": "SYNC=FALSE pm2-runtime start ./bin/www --name project",
+		"restart": "SYNC=FALSE pm2 restart ./bin/www --name project --watch --ignore-watch=\"node_modules/* .git/* logs/*\" --time --update-env",
+		"restart_s": "SYNC=TRUE pm2 restart ./bin/www --name project --watch --ignore-watch=\"node_modules/* .git/* logs/*\" --time --update-env",
+		"start_s": "SYNC=TRUE pm2 start ./bin/www --name project --watch --ignore-watch=\"node_modules/* .git/* logs/*\" --time --update-env"
 	},
 	"repository": {
 		"type": "git",
