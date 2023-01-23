@@ -74,6 +74,9 @@ async function dbConnection() {
 			console.log("Connection has been established successfully.");
 		})
 		.then(() => {
+			if (process.env.SYNC && process.env.SYNC == "TRUE") {
+				return db.sequelize.sync({ alter: true });
+			}
 			console.log("DB Sync complete.");
 		})
 		.catch((err) => {
