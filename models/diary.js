@@ -1,8 +1,8 @@
 const { truncate } = require("fs");
 
 module.exports = function (sequelize, DataTypes) {
-	const user = sequelize.define(
-		"user	",
+	const diary = sequelize.define(
+		"diary",
 		{
 			id: {
 				type: DataTypes.INTEGER,
@@ -10,33 +10,20 @@ module.exports = function (sequelize, DataTypes) {
 				primaryKey: true,
 				autoIncrement: true,
 			},
-			name: {
+			contents: {
 				type: DataTypes.STRING,
 				allowNull: false,
 			},
-			gender: {
+			status: {
 				type: DataTypes.STRING,
 				allowNull: false,
-			},
-			phone_number: {
-				type: DataTypes.STRING,
-				allowNull: false,
-			},
-			age: {
-				type: DataTypes.INTEGER,
-				allowNull: false,
-			},
-			deleted: {
-				type: DataTypes.BOOLEAN,
-				allowNull: false,
-				default: false
 			},
 		},
 		{
 			sequelize,
-			tableName: "user",
+			tableName: "diary",
 			timestamps: true,
 		}
 	);
-	return user;
+	return diary;
 };
