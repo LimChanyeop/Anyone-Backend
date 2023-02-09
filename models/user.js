@@ -2,7 +2,7 @@ const { truncate } = require("fs");
 
 module.exports = function (sequelize, DataTypes) {
 	const user = sequelize.define(
-		"user	",
+		"user",
 		{
 			id: {
 				type: DataTypes.INTEGER,
@@ -20,11 +20,7 @@ module.exports = function (sequelize, DataTypes) {
 			},
 			phone_number: {
 				type: DataTypes.STRING,
-				allowNull: false,
-			},
-			age: {
-				type: DataTypes.INTEGER,
-				allowNull: false,
+				allowNull: true,
 			},
 			deleted: {
 				type: DataTypes.BOOLEAN,
