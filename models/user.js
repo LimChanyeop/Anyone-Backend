@@ -10,15 +10,15 @@ module.exports = function (sequelize, DataTypes) {
 				primaryKey: true,
 				autoIncrement: true,
 			},
-			email: {
+			name: {
 				type: DataTypes.STRING,
 				allowNull: false,
 			},
-			user_type: {
+			gender: {
 				type: DataTypes.STRING,
 				allowNull: false,
 			},
-			username: {
+			phone_number: {
 				type: DataTypes.STRING,
 				allowNull: true,
 			},
